@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Theme from "./theme-provider";
 import { ToggleThemeButton } from "./toggle-theme-button";
+import { Sidebar } from "@/components/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,7 @@ export default function RootLayout({
         <Theme>
           <ToggleThemeButton />
           <div className="grid-cols-app grid min-h-screen">
-            <aside className="border-r border-zinc-200 px-5 py-8 dark:border-zinc-600">
-              sidebar
-            </aside>
+            <Sidebar />
             <main className="px-4 pb-12 pt-8">{children}</main>
           </div>
         </Theme>
