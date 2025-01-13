@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react"
 import { UsedSpaceWidget } from "./used-space-widget"
+import { Profile } from "./Profile"
 
 export function Sidebar() {
   return (
@@ -42,6 +43,10 @@ export function Sidebar() {
       </div>
 
       <UsedSpaceWidget />
+
+      <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
+
+      <Profile />
     </aside>
   )
 }
