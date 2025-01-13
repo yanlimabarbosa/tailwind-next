@@ -11,20 +11,19 @@ import {
 } from "lucide-react"
 import { UsedSpaceWidget } from "./used-space-widget"
 import { Profile } from "./Profile"
+import Input from "../Input"
 
 export function Sidebar() {
   return (
     <aside className="flex flex-col gap-6 border-r border-zinc-200 px-5 py-8 dark:border-zinc-600">
       <Logo />
 
-      <div className="mx-1 flex w-full items-center gap-3 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm dark:border-zinc-600">
-        <Search className="h-5 w-5 text-zinc-500" />
-        <input
-          type="text"
-          placeholder="Search"
-          className="flex-1 border-0 bg-transparent p-0 text-zinc-900 placeholder-zinc-600 dark:text-zinc-100 dark:placeholder-zinc-300"
-        />
-      </div>
+      <Input.Root>
+        <Input.Prefix>
+          <Search className="h-5 w-5 text-zinc-500" />
+        </Input.Prefix>
+        <Input.Control placeholder="Search" />
+      </Input.Root>
 
       <nav className="space-y-0.5">
         <NavItem title="home" icon={Home} />
